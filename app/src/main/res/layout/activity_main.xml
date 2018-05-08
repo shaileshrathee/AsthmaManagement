@@ -2,7 +2,7 @@
 <LinearLayout android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_margin="12dp"
-    android:weightSum="8"
+    android:weightSum="3"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -11,67 +11,33 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="select day"
+        android:text="enter time in 24 hour format"
         android:gravity="center_horizontal|center_vertical"/>
 
     <EditText
-        android:id="@+id/day"
-        android:layout_weight="1"
-        android:inputType="number"
+        android:inputType="time"
+        android:id="@+id/time_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="0"/>
+        android:layout_weight="1"/>
 
-    <TextView
-        android:textColor="#000000"
-        android:layout_weight="1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="select hour"
-        android:gravity="center_horizontal|center_vertical"/>
-
-    <EditText
-        android:id="@+id/hour"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="0"/>
-
-
-    <TextView
-        android:textColor="#000000"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="select minute"
-        android:gravity="center_horizontal|center_vertical"/>
-
-    <EditText
-        android:id="@+id/minute"
-        android:inputType="number"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="0"/>
-
-
-    <Button
-        android:layout_weight="1"
-        android:onClick="setAlarm"
-        android:id="@+id/btnSetAlarm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Set Alarm" />
-
-    <Button
-        android:layout_weight="1"
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="playVideo"
-        android:text="PlayVideo" />
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:onClick="setAlarm"
+            android:id="@+id/btnSetAlarm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Set Alarm" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/submit_data"
+            android:text="submit data"/>
+    </LinearLayout>
 </LinearLayout>
