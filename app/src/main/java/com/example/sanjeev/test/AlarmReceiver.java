@@ -22,11 +22,10 @@ public class AlarmReceiver extends BroadcastReceiver{
         // Launch the video
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         // Launch the video when screen is turned on
-        if (pm != null && pm.isInteractive()) {
+
             Intent i = new Intent();
             i.setClassName("com.example.sanjeev.test", "com.example.sanjeev.test.VideoPlayer");
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
-        }
     }
 }
