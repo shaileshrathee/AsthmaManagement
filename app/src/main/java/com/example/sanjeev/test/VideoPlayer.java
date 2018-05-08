@@ -7,6 +7,7 @@ import android.widget.VideoView;
 
 public class VideoPlayer extends AppCompatActivity {
 
+    // This activity just plays video in landscape mode
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
