@@ -3,10 +3,13 @@ package com.example.sanjeev.test;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
+import android.widget.RelativeLayout;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -53,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void survey1(View view) {
         Intent in = new Intent(this, WebPageDisplay.class);
-        url = "http://www.google.com";
+        url = "https://docs.google.com/forms/d/e/1FAIpQLSfuOzx8lllerEqEsYU0sM1S-NINYDO_4KGETE1dbDS1H1d4Bg/viewform";
         in.putExtra("URL", url);
         startActivity(in);
     }
 
     public void survey2(View view) {
         Intent in = new Intent(this, WebPageDisplay.class);
-        url = "http://www.google.com";
+        url = "https://docs.google.com/forms/d/e/1FAIpQLSd4UPGv-1qJfEyjjiT1tbikTkqwLWzn-P3BOiarGr8YxDNBqg/viewform";
         in.putExtra("URL", url);
         startActivity(in);
     }
