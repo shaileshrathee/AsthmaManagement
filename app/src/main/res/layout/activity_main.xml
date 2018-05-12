@@ -1,43 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_margin="12dp"
-    android:weightSum="3"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <TextView
+        android:id="@+id/text_view"
         android:textColor="#000000"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="enter time in 24 hour format"
         android:gravity="center_horizontal|center_vertical"/>
 
-    <EditText
-        android:inputType="time"
-        android:id="@+id/time_input"
+    <TimePicker
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-        <Button
-            android:layout_weight="1"
-            android:onClick="setAlarm"
-            android:id="@+id/btnSetAlarm"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="Set Alarm" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/submit_data"
-            android:text="submit data"/>
-    </LinearLayout>
-</LinearLayout>
+        android:layout_below="@id/text_view"
+        android:timePickerMode="spinner"
+        android:id="@+id/time_input"
+        />
+    <Button
+        android:onClick="setAlarm"
+        android:layout_below="@id/time_input"
+        android:id="@+id/btnSetAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Alarm" />
+    <Button
+        android:layout_below="@id/btnSetAlarm"
+        android:layout_width="wrap_content"
+        android:onClick="submitData"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_data"
+        android:text="submit data"/>
+    <Button
+        android:onClick="survey1"
+        android:layout_below="@id/submit_data"
+        android:id="@+id/survey1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="survey1"/>
+    <Button
+        android:onClick="survey2"
+        android:layout_below="@id/submit_data"
+        android:layout_toEndOf="@id/survey1"
+        android:id="@+id/survey2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="survey2"/>
+</RelativeLayout>
