@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -24,6 +25,10 @@ public class WebPageDisplay extends AppCompatActivity {
                 return false;
             }
         });
+
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
         Intent in = getIntent();
         String mURL = in.getStringExtra("URL");
         webView.loadUrl(mURL);

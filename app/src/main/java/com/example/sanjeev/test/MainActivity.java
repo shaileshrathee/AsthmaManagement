@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -44,9 +45,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitData(View view) {
-
         Intent in = new Intent(this, WebPageDisplay.class);
-        url = "http://www.google.com";
+        url = "https://docs.google.com/forms/d/e/1FAIpQLSdYMCaQ2ypqSgkRGc6q2FFNc6uWeQtPzzbVGJrB6_Uty2r04g/viewform?usp=sf_link";
         in.putExtra("URL", url);
         startActivity(in);
     }
