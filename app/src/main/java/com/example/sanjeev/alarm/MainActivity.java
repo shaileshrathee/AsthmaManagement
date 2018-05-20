@@ -1,15 +1,11 @@
-package com.example.sanjeev.test;
+package com.example.sanjeev.alarm;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.widget.RelativeLayout;
 import android.widget.TimePicker;
 import android.widget.Toast;
 

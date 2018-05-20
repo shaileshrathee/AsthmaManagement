@@ -1,4 +1,4 @@
-package com.example.sanjeev.test;
+package com.example.sanjeev.alarm;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

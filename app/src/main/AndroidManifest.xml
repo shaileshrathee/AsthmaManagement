@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sanjeev.test">
+    package="com.example.sanjeev.alarm">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.sanjeev.alarm.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,15 +20,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".VideoPlayer"
+            android:name="com.example.sanjeev.alarm.VideoPlayer"
             android:label="@string/app_name"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.example.sanjeev.alarm.MainActivity"
             android:screenOrientation="landscape" />
 
-        <receiver android:name=".AlarmReceiver"></receiver>
+        <receiver android:name="com.example.sanjeev.alarm.AlarmReceiver"></receiver>
 
-        <activity android:name=".WebPageDisplay"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name="com.example.sanjeev.alarm.WebPageDisplay"
+            android:parentActivityName="com.example.sanjeev.alarm.MainActivity"></activity>
     </application>
 
 </manifest>

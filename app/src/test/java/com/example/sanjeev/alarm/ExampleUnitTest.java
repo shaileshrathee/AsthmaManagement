@@ -1,4 +1,4 @@
-package com.example.sanjeev.test;
+package com.example.sanjeev.alarm;
 
 import org.junit.Test;
 
